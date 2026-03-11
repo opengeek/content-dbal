@@ -11,10 +11,11 @@ composer require opengeek/content-dbal
 ```
 
 ## Features
-
-- **Read/Write**: Full repository and persister support.
-- **Relational Storage**: Backed by Doctrine DBAL for broad database support.
-- **SQLite Support**: Includes an optional SQLite-specific schema manager.
+- **Generic Architecture**: `AbstractDbalRepository` for consistent SQL-backed repositories.
+- **Mappers**: Decoupled `DbalArticleMapper` for simple DTO-to-row mapping.
+- **Read/Write Support**: Extensible repository and persister patterns.
+- **Relational Storage**: Built on Doctrine DBAL for broad database compatibility.
+- **SQLite Support**: Preconfigured SQLite schema management for testing and small apps.
 
 ## Usage
 

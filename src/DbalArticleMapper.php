@@ -5,12 +5,27 @@ declare(strict_types=1);
 namespace Opengeek\Content\Dbal;
 
 use Opengeek\Content\Article;
+use Opengeek\Content\Contracts\ContentMapperInterface;
 
 /**
  * Maps DBAL row arrays to Article DTOs and vice versa.
+ *
+ * @implements ContentMapperInterface<array<string, mixed>, Article>
  */
-final readonly class DbalArticleMapper
+final readonly class DbalArticleMapper implements ContentMapperInterface
 {
+    /**
+     * Map a database row to an Article DTO.
+     *
+     * @param array<string, mixed> $source
+     *
+     * @return Article
+     */
+    public function map(mixed $source): Article
+    {
+        return $this->mapToDto($source);
+    }
+
     /**
      * Map a database row to an Article DTO.
      *

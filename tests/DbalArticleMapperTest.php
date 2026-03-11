@@ -89,4 +89,36 @@ final class DbalArticleMapperTest extends TestCase
         $this->assertEquals(json_encode(['cat1', 'cat2']), $row['categories']);
         $this->assertEquals(json_encode(['tag1', 'tag2']), $row['tags']);
     }
+
+    public function testMapToDtoWithInvalidJson(): void
+    {
+        $row = [
+            'slug' => 'test-slug',
+            'title' => 'Test Title',
+            'publish_date' => '2024-01-01 12:00:00',
+            'markdown_content' => '# Content',
+            'categories' => 'invalid-json',
+        ];
+
+        $article = $this->mapper->mapToDto($row);
+
+        $this->assertEquals([], $article->categories);
+    }
+
+    public function testMapToDtoWithEmptyFields(): void
+    {
+        $row = [
+            'slug' => 'test-slug',
+            'title' => 'Test Title',
+            'publish_date' => '2024-01-01 12:00:00',
+            'markdown_content' => '# Content',
+            'categories' => '',
+            'tags' => null,
+        ];
+
+        $article = $this->mapper->mapToDto($row);
+
+        $this->assertEquals([], $article->categories);
+        $this->assertEquals([], $article->tags);
+    }
 }
