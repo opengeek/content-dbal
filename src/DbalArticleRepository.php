@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Opengeek\Content\Dbal;
 
+use Doctrine\DBAL\Connection;
 use Opengeek\Content\Article;
 use Opengeek\Content\ArticleCollection;
 use Opengeek\Content\ArticleRepositoryInterface;
-use Doctrine\DBAL\Connection;
 
 /**
  * Read-only Article repository implementation using Doctrine DBAL.

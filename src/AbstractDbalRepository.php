@@ -37,7 +37,7 @@ abstract readonly class AbstractDbalRepository implements ContentRepositoryInter
             ->fetchAllAssociative();
 
         return $this->createCollection(array_map(
-            fn(array $row) => $this->mapper->map($row),
+            fn (array $row) => $this->mapper->map($row),
             $rows
         ));
     }
@@ -57,7 +57,7 @@ abstract readonly class AbstractDbalRepository implements ContentRepositoryInter
             ->fetchAllAssociative();
 
         return $this->createCollection(array_map(
-            fn(array $row) => $this->mapper->map($row),
+            fn (array $row) => $this->mapper->map($row),
             $rows
         ));
     }

@@ -41,7 +41,7 @@ final class SqliteArticleSchemaManagerTest extends TestCase
         ]);
 
         $schemaManager = new SqliteArticleSchemaManager($connection);
-        
+
         // Run twice
         $schemaManager->initializeSchema();
         $schemaManager->initializeSchema();
