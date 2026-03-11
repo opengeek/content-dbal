@@ -6,10 +6,10 @@ namespace Opengeek\Content\Dbal\Tests;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
-use Opengeek\Content\Exception\ContentPersistenceException;
 use Opengeek\Content\Article;
 use Opengeek\Content\Dbal\DbalArticlePersister;
 use Opengeek\Content\Dbal\SqliteArticleSchemaManager;
+use Opengeek\Content\Exception\ContentPersistenceException;
 use PHPUnit\Framework\TestCase;
 
 final class DbalArticlePersisterTest extends TestCase

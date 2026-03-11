@@ -35,9 +35,9 @@ final readonly class SqliteArticleSchemaManager
             )
         ");
 
-        $this->connection->executeStatement("
+        $this->connection->executeStatement('
             CREATE INDEX IF NOT EXISTS idx_articles_publish_date 
             ON articles (publish_date DESC)
-        ");
+        ');
     }
 }

@@ -6,10 +6,10 @@ namespace Opengeek\Content\Dbal\Tests;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
-use Opengeek\Content\Exception\ContentNotFoundException;
 use Opengeek\Content\Article;
 use Opengeek\Content\Dbal\DbalArticleRepository;
 use Opengeek\Content\Dbal\SqliteArticleSchemaManager;
+use Opengeek\Content\Exception\ContentNotFoundException;
 use PHPUnit\Framework\TestCase;
 
 final class DbalArticleRepositoryTest extends TestCase

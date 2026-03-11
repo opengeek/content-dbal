@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Opengeek\Content\Dbal;
 
 use Doctrine\DBAL\Connection;
-use Opengeek\Content\Exception\ContentPersistenceException;
 use Opengeek\Content\Article;
 use Opengeek\Content\ArticlePersisterInterface;
+use Opengeek\Content\Exception\ContentPersistenceException;
 
 /**
  * Article persister implementation using Doctrine DBAL.
